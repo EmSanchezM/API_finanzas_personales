@@ -17,6 +17,6 @@ router.post('/', [
     validarCampos
 ], createAhorro);
 
-router.delete('ahorro_id', deleteAhorro);
+router.delete('/:ahorro_id', deleteAhorro);
 
 module.exports = router;

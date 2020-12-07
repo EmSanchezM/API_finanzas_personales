@@ -17,6 +17,6 @@ router.post('/', [
     validarCampos
 ], createPrestamo);
 
-router.delete('prestamo_id', deletePrestamo);
+router.delete('/:prestamo_id', deletePrestamo);
 
 module.exports = router;

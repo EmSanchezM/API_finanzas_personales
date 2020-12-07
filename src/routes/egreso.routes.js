@@ -14,6 +14,6 @@ router.post('/', [
     validarCampos
 ], createEgreso);
 
-router.delete('egreso_id', deleteEgreso);
+router.delete('/:egreso_id', deleteEgreso);
 
 module.exports = router;

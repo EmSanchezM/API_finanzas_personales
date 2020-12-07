@@ -35,8 +35,10 @@ ingresoController.createIngreso = async(req, res=response)=>{
 
 ingresoController.deleteIngreso = async(req, res=response)=>{
     const id = req.params.ingreso_id;
+    console.log('ID ',id)
     try {
         const ingreso = await Ingreso.findById(id);
+        console.log('ingreso ', ingreso)
         if(!ingreso){
             return res.status(404).json({
                 ok:false,
