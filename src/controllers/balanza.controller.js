@@ -28,6 +28,8 @@ balanzaController.getBalanza = async(req, res=response)=>{
 
         return res.status(200).json({
             ok:true,
+            ingresos: ingresos,
+            egresos: egresos,
             balanza: balanza
         });
 
