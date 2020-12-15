@@ -10,11 +10,12 @@ egresoController.getEgresos = async(req, res=response)=>{
 }
 
 egresoController.createEgreso = async(req, res=response)=>{
-    const {name, quantity } = req.body;
+    const {name, quantity, mes } = req.body;
     try {
         const newEgreso = new Egreso({
             name,
-            quantity
+            quantity,
+            mes
         });
 
         await newEgreso.save();
