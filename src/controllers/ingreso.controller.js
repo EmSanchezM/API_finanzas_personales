@@ -10,11 +10,12 @@ ingresoController.getIngresos = async(req, res=response)=>{
 }
 
 ingresoController.createIngreso = async(req, res=response)=>{
-    const {name, quantity } = req.body;
+    const {name, quantity, mes } = req.body;
     try {
         const newIngreso = new Ingreso({
             name,
-            quantity
+            quantity,
+            mes
         });
 
         await newIngreso.save();
