@@ -17,7 +17,7 @@ balanzaController.getBalanza = async(req, res=response)=>{
         }
 
         ingresos.map(ingreso=>{
-            balanza.totalIngresos = balanza.totalIngresos + ingreso.get('quantity')
+            balanza.totalIngresos +=  ingreso.get('quantity')
         });
 
         egresos.map(egreso=>{
